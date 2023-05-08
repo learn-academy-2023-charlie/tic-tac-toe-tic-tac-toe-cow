@@ -1,5 +1,30 @@
 .square {
-  border: 2px solid black;
+  border: 3px solid black;
   height: 100px;
   width: 100px;
+  text-align: center;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  margin: 0 auto;
+}
+body{
+  background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperflare.com%2Ftic-tac-toe-game-toys-play-wood-wooden-toys-tic-tac-toe-wallpaper-whbqt&psig=AOvVaw2v67FrYtAGJgdIoj_1CHBD&ust=1683673060987000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPja_Yjp5v4CFQAAAAAdAAAAABAK);
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  color: blue;
+}
+
+header{
+  text-align: center;
+  color: blue;
 }
