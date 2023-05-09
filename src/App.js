@@ -27,6 +27,9 @@ const App = () => {
     return null;
   }
   const handleClick = (selectedIndex) => {
+    if(winner){
+      return;
+    }
     const newBoard = [...squares];
     if (newBoard[selectedIndex]) {
       return;
@@ -38,13 +41,21 @@ const App = () => {
     setPlayer(newPlayer);
     const gameWinner = calculateWinner(newBoard);
     setWinner(gameWinner);
+
+    if(!gameWinner && !newBoard.includes(null)){
+      alert("GAME OVER - IT IS A TIE!");
+      handleRestart();
+    }
   }
   const handleRestart = () => { setSquares(Array(9).fill(null)); setPlayer("X"); setWinner(null);}
 
+
+
   return (
     <>
-      <h1>Tic Tac Toe</h1>
+      
       <Square squares={squares} handleClick={handleClick}/>
+      <br></br>
       {winner && <h2 className="winner" >{winner} Wins!! </h2> }
       <br></br>
       <br></br>
@@ -52,9 +63,7 @@ const App = () => {
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
-      <footer> Henri, Justin and Kyle</footer>
+      <footer> @ Henri, Justin and Kyle</footer>
     </>
   )
 }
