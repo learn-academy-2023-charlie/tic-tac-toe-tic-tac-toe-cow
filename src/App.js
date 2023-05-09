@@ -39,12 +39,22 @@ const App = () => {
     const gameWinner = calculateWinner(newBoard);
     setWinner(gameWinner);
   }
+  const handleRestart = () => { setSquares(Array(9).fill(null)); setPlayer("X"); setWinner(null);}
+
   return (
     <>
       <h1>Tic Tac Toe</h1>
       <Square squares={squares} handleClick={handleClick}/>
-      {winner && <h2>{winner} Wins!! </h2> }
-      <header> Henri, Justin and Kyle</header>
+      {winner && <h2 className="winner" >{winner} Wins!! </h2> }
+      <br></br>
+      <br></br>
+      <button id="button" onClick={handleRestart}>Restart</button>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <footer> Henri, Justin and Kyle</footer>
     </>
   )
 }
