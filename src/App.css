@@ -1,5 +1,5 @@
 .square {
-  border: 3px solid black;
+  border: 3px solid rgb(218, 236, 13);
   height: 100px;
   width: 100px;
   text-align: center;
@@ -12,19 +12,102 @@
   display: flex;
   flex-wrap: wrap;
   width: 350px;
-  margin: 0 auto;
+  margin: 0 auto; 
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  border-style: double;
+  border-width: 5px;
 }
-body{
-  background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperflare.com%2Ftic-tac-toe-game-toys-play-wood-wooden-toys-tic-tac-toe-wallpaper-whbqt&psig=AOvVaw2v67FrYtAGJgdIoj_1CHBD&ust=1683673060987000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPja_Yjp5v4CFQAAAAAdAAAAABAK);
-  background-size: cover;
+
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Replace $bg-url with its value */
+body {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  
+  /* Replace $bg-width with its value */
+  -webkit-animation: bg-scrolling-reverse .92s infinite;
+  -moz-animation:    bg-scrolling-reverse .92s infinite;
+  -o-animation:      bg-scrolling-reverse .92s infinite;
+  animation:         bg-scrolling-reverse .92s infinite;
+  
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
+  
+  margin-top: 13.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
 }
+
+/* Replace all the $bg-width and $bg-height variables with their values */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+
+/* Add the ::before pseudo-element outside the body selector */
+body::before {
+  content: "INFINITY";
+
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* body { 
+  background-image: url(https://elements-video-cover-images-0.imgix.net/files/230942995/Preview+Image.jpg?auto=compress%2Cformat&fit=min&h=394&w=700&s=3ad6ca42a44293a6e96b29b66e938c6f.com/uploads/wallpapers/2016/12/04/1061513/a0e42eb7fb3171e2ab24523ca0d707d7.jpg);
+  background-position:center;
+  background-size:cover;
+  background-attachment: fixed;
+} */
 
 h1{
   text-align: center;
   color: blue;
 }
 
-header{
+footer{
   text-align: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
   color: blue;
+}
+#button{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+.winner{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
 }
